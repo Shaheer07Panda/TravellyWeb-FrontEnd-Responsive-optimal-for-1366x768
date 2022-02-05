@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 70.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Cabin', sans-serif;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+}
+
+.main-head {
+    background-color: black;
+    min-height: 10vh;
+    padding: 2rem;
+}
+
+#logo {
+    color: white;
+    flex: 2 1 40rem;
+    align-items: center;
+    font-size: 2rem;
+    font-family: 'Satisfy', cursive;
+    font-weight: 800;
+}
+
+a {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    font-size: 1.9rem;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex: 1 1 40rem;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+/*Section nav is done*/
+
+.section2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), transparent), url(/img/Travelling.jpg);
+    background-attachment: fixed;
+    min-height: 90vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-weight: normal;
+}
+
+.section2 h1 {
+    font-size: 3.8rem;
+    letter-spacing: 0.4rem;
+    padding: 1rem;
+}
+
+.section2 p {
+    line-height: 2.5rem;
+    font-size: 1.8rem;
+    padding: 1.5rem;
+}
+
+.section2 button {
+    font-size: 1.9rem;
+    padding: 1.5rem 4rem;
+    border: none;
+    color: white;
+    background: rgb(80, 80, 180);
+    cursor: pointer;
+    font-family: 'Cabin', sans-serif;
+    transition: background 0.5s ease-in-out;
+    animation: buttonAnimation 11s infinite alternate;
+}
+
+@keyframes buttonAnimation {
+    0% {
+        background: rgb(80, 80, 180);
+    }
+    25% {
+        background: rgb(97, 192, 221);
+    }
+    50% {
+        background: rgb(221, 178, 97);
+    }
+    75% {
+        background: rgb(40, 126, 62);
+    }
+    100% {
+        background: rgb(216, 71, 71);
+    }
+}
+
+
+/*section 2 is over*/
+
+#locations {
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), transparent), url(img/new-york-page.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.locations-head {
+    width: 85%;
+    margin: auto;
+}
+
+.locations-head h1 {
+    padding-bottom: 2rem;
+    font-size: 4rem;
+    letter-spacing: 0.2rem;
+    text-decoration: underline;
+}
+
+.locations-head p {
+    font-size: 2.2rem;
+    color: linear-gradient(#131c27, #663b34);
+}
+
+.cloud {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+}
+
+.locations-head img {
+    height: 35rem;
+}
+
+.cloud-animation1 {
+    top: 15%;
+    z-index: -1;
+    opacity: 0.6;
+    animation: cloudAnimation 5s infinite alternate;
+}
+
+.cloud-animation2 {
+    animation: cloudAnimation 4s infinite alternate;
+}
+
+@keyframes cloudAnimation {
+    from {
+        transform: translate(10%, -10%);
+    }
+    to {
+        transform: translate(0%, 0%);
+    }
+}
+
+
+/*Location section is done*/
+
+
+/*Benefits section*/
+
+#benefits {
+    min-height: 100vh;
+}
+
+.title-section {
+    min-height: 30vh;
+    background-color: rgb(48, 48, 92);
+    display: flex;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 400;
+    padding: 3.5rem;
+}
+
+.title-section h1 {
+    font-size: 2.5rem;
+    padding: 2rem;
+}
+
+.title-section p {
+    font-size: 1.8rem;
+    line-height: 3rem;
+}
+
+.cards-section {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    min-height: 50vh;
+    width: 25%;
+    box-shadow: 0px 5px 10px gray, 0px 10px 20px gray;
+}
+
+.cardimg {
+    background: rgb(48, 48, 92);
+}
+
+.card h2,
+.card p {
+    padding: 1rem;
+    font-size: 1.7rem;
+}
+
+.card h2 {
+    font-size: 2rem;
+}
+
+.card img {
+    width: 8rem;
+}
+
+#contact {
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), transparent), url(/img/contact-mountain.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.name-wrapper,
+.email-wrapper {
+    padding: 1.5rem 0rem;
+}
+
+.email-wrapper {
+    padding-bottom: 3rem;
+}
+
+.form-wrapper label {
+    margin: 0rem 3rem;
+    font-size: 1.8rem;
+}
+
+.form-wrapper h1 {
+    font-weight: normal;
+    font-size: 2rem;
+    padding-top: 2rem;
+}
+
+.form-wrapper {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    width: 40%;
+    border-radius: 1rem;
+}
+
+.form-wrapper input {
+    padding: 0.5rem 4rem;
+}
+
+.form-wrapper input::placeholder {
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+.form-wrapper button {
+    width: 100%;
+    color: white;
+    background: rgb(83, 83, 185);
+    border: none;
+    font-family: cursive;
+    font-size: 1.7rem;
+    padding: 0.9rem 0rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    cursor: pointer;
+}
+
+.form-wrapper button:hover {
+    background: rgb(103, 103, 172);
+    transition: 1s;
+}
+
+
+/*Media Queury Section*/
+
+@media screen and (max-width: 569px) {
+    nav {
+        text-align: center;
+    }
+    #logo {
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .section2 h1 {
+        font-size: 3.2rem;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .section2 h1 {
+        font-size: 2.9rem;
+    }
+    .section2 p {
+        font-size: 1.3rem;
+    }
+    .section2 button {
+        padding: 1rem 1rem;
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .locations-head h1 {
+        font-size: 2.5rem;
+    }
+    .locations-head p {
+        font-size: 1.3rem;
+    }
+    .locations-head img {
+        height: 14rem;
+    }
+    .cloud-animation1 {
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 721px) {
+    .locations-head img {
+        height: 20rem;
+    }
+}
+
+@media screen and (max-width: 625px) {
+    .locations-head img {
+        height: 18rem;
+    }
+    .locations-head p {
+        background: rgba(65, 79, 97, 0.7);
+        padding: 4rem 0rem;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .locations-head img {
+        height: 10rem;
+    }
+    .cloud-animation1 {
+        opacity: 0;
+    }
+}
+
+
+/*section 2 Is Done*/
